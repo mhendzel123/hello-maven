@@ -1,9 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         
     <modelVersion>4.0.0</modelVersion>
     <groupId>pl.edu.agh.mwo.hellomaven</groupId>
-    <artifactId>hello-maven</artifactId>
+    <!-- <artifactId>hello-maven</artifactId> -->
+    <artifactId>hello-maven-0.1-demo.jar</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -11,6 +14,7 @@
         <maven.jar.plugin.version>3.2.0</maven.jar.plugin.version>
         <maven.shade.plugin.version>3.2.3</maven.shade.plugin.version>
     </properties>
+    
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
         <plugins>
@@ -60,7 +64,7 @@
                 <configuration>
                     <forkCount>3</forkCount>
                     <reuseForks>true</reuseForks>
-                    <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
+                    <argLine> -Xmx1024m -XX:MaxPermSize=256m</argLine>
                 </configuration>
             </plugin>
             <!-- JaCoCo configuration - provides test coverage reports -->
@@ -85,11 +89,12 @@
             </plugin>
         </plugins>
     </build>
+    
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>4.13</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
